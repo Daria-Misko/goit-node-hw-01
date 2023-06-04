@@ -4,8 +4,6 @@ const { readFile, writeFile } = require("fs").promises;
 
 const contactsPath = path.join(__dirname, "./db/contacts.json");
 
-// TODO: задокументувати кожну функцію
-
 async function listContacts() {
 	const data = await readFile(contactsPath, "utf-8");
 	const result = JSON.parse(data);
